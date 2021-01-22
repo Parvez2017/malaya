@@ -13,13 +13,13 @@ def lexicon(**kwargs):
 
     Returns
     -------
-    result : malaya.lexicon.nsfw.LEXICON class
+    result : malaya.lexicon.nsfw.Lexicon class
     """
 
     check_file(PATH_NSFW['lexicon'], S3_PATH_NSFW['lexicon'], **kwargs)
     with open(PATH_NSFW['lexicon']['model']) as fopen:
         corpus = json.load(fopen)
-    return nsfw.LEXICON(corpus)
+    return nsfw.Lexicon(corpus)
 
 
 def multinomial(**kwargs):
@@ -28,6 +28,6 @@ def multinomial(**kwargs):
 
     Returns
     -------
-    result : malaya.model.ml.BAYES class
+    result : malaya.model.ml.Bayes class
     """
     return softmax.multinomial(PATH_NSFW, S3_PATH_NSFW, 'nsfw', label, **kwargs)

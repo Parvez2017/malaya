@@ -426,31 +426,47 @@ def encoder(vectorizer):
 
 
 _transformer_availability = {
-    'bert': {'Size (MB)': 423.4, 'Quantized Size (MB)': 111, 'Accuracy': 0.885},
+    'bert': {
+        'Size (MB)': 423.4,
+        'Quantized Size (MB)': 111,
+        'macro precision': 0.88315,
+        'macro recall': 0.88656,
+        'macro f1-score': 0.88405,
+    },
     'tiny-bert': {
         'Size (MB)': 56.6,
         'Quantized Size (MB)': 15,
-        'Accuracy': 0.873,
+        'macro precision': 0.87210,
+        'macro recall': 0.87546,
+        'macro f1-score': 0.87292,
     },
     'albert': {
         'Size (MB)': 48.3,
         'Quantized Size (MB)': 12.8,
-        'Accuracy': 0.873,
+        'macro precision': 0.87164,
+        'macro recall': 0.87146,
+        'macro f1-score': 0.87155,
     },
     'tiny-albert': {
         'Size (MB)': 21.9,
         'Quantized Size (MB)': 6,
-        'Accuracy': 0.824,
+        'macro precision': 0.82234,
+        'macro recall': 0.82383,
+        'macro f1-score': 0.82295,
     },
     'xlnet': {
         'Size (MB)': 448.7,
         'Quantized Size (MB)': 119,
-        'Accuracy': 0.784,
+        'macro precision': 0.80866,
+        'macro recall': 0.76775,
+        'macro f1-score': 0.77112,
     },
     'alxlnet': {
         'Size (MB)': 49.0,
         'Quantized Size (MB)': 13.9,
-        'Accuracy': 0.888,
+        'macro precision': 0.88756,
+        'macro recall': 0.88700,
+        'macro f1-score': 0.88727,
     },
 }
 

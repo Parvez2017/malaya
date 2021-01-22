@@ -8,32 +8,58 @@ _transformer_availability = {
     'bert': {
         'Size (MB)': 425.6,
         'Quantized Size (MB)': 111,
-        'Accuracy': 0.89740,
+        'macro precision': 0.89320,
+        'macro recall': 0.89195,
+        'macro f1-score': 0.89256,
     },
     'tiny-bert': {
         'Size (MB)': 57.4,
         'Quantized Size (MB)': 15.4,
-        'Accuracy': 0.87413,
+        'macro precision': 0.87179,
+        'macro recall': 0.86324,
+        'macro f1-score': 0.86695,
     },
     'albert': {
         'Size (MB)': 48.6,
         'Quantized Size (MB)': 12.8,
-        'Accuracy': 0.88268,
+        'macro precision': 0.89798,
+        'macro recall': 0.86008,
+        'macro f1-score': 0.87209,
     },
     'tiny-albert': {
         'Size (MB)': 22.4,
         'Quantized Size (MB)': 5.98,
-        'Accuracy': 0.82780,
+        'macro precision': 0.82157,
+        'macro recall': 0.83410,
+        'macro f1-score': 0.82416,
     },
     'xlnet': {
         'Size (MB)': 446.6,
         'Quantized Size (MB)': 118,
-        'Accuracy': 0.92762,
+        'macro precision': 0.92707,
+        'macro recall': 0.92103,
+        'macro f1-score': 0.92381,
     },
     'alxlnet': {
         'Size (MB)': 46.8,
         'Quantized Size (MB)': 13.3,
-        'Accuracy': 0.91231,
+        'macro precision': 0.91135,
+        'macro recall': 0.90446,
+        'macro f1-score': 0.90758,
+    },
+    'bigbird': {
+        'Size (MB)': 458,
+        'Quantized Size (MB)': 116,
+        'macro precision': 0.88093,
+        'macro recall': 0.86832,
+        'macro f1-score': 0.87352,
+    },
+    'tiny-bigbird': {
+        'Size (MB)': 65,
+        'Quantized Size (MB)': 16.9,
+        'macro precision': 0.86074,
+        'macro recall': 0.80252,
+        'macro f1-score': 0.81613,
     },
 }
 
@@ -65,6 +91,8 @@ def transformer(model: str = 'xlnet', quantized: bool = False, **kwargs):
         * ``'tiny-albert'`` - Google ALBERT TINY parameters.
         * ``'xlnet'`` - Google XLNET BASE parameters.
         * ``'alxlnet'`` - Malaya ALXLNET BASE parameters.
+        * ``'bigbird'`` - Google BigBird BASE parameters.
+        * ``'tiny-bigbird'`` - Malaya BigBird TINY parameters.
     quantized : bool, optional (default=False)
         if True, will load 8-bit quantized model. 
         Quantized model not necessary faster, totally depends on the machine.
